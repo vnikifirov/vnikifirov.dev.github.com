@@ -1,0 +1,151 @@
+# Welcome to Jekyll!
+
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+
+#-------------------------------
+# General Site Settings
+
+url: "http://nikifovadim.com" # the base hostname & protocol for your site, e.g. http://nikifovadim.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Vadim N."
+github-url: "http://nikifovadim.com"
+
+#-------------------------------
+# Header
+brand: Hello World!
+byline: Hi! I'm <span class="higlidght">Vadim</span>
+occupation: .NET/C# Developer</span>
+#occupation: Mobile / <span class="txt-non-breaking">Web-Developer</span>
+about-me: <p>I've been touching code for several years. I first started programming, when i went to High School. I thought, it'd be interesting to learn C# and .NET. <p>Most recently, my experience has been in the insurance service industry, producing CRM system to assist in customer retention and driving sales growth. I'm looking for a position where I can grow my skils. Also, I'd like to try myself in startups.  I love this idea xD.</p> <p>I am looking to develop skill sets in communication and negotiation. It means, i need to gain my knowledge in English. Also, I'd like to improve my understanding of software development (SD) lifecycle and learnt methodology like Agile. I open to the learning new things.</p> <p>Currently, i'm a student in the Information Security and also, i'm participating in 100DaysofCode. I study English languages. I like watching moving and reading books.</p></p>
+
+# Images
+
+logo: "logo.jpg"
+avatar: avatar.jpg
+about-photo: avatar.jpg
+bg-image: background.jpg
+
+# add-folder: add-folder.png
+# folder: folder.png
+
+# Navigation Menu Items
+menu:
+- {name: About, url: '#about-me'}
+- {name: Skills, url: '#skills'}
+- {name: Contact, url: '#contact'}
+
+#-------------------------------
+# Footer
+author: Vadim Nikiforov
+copyright-date: 2018
+
+#-------------------------------
+# SEO Section
+
+# NOTE: Providing SEO information will make this website more searchable on the internet.
+seo:
+  description: 'Vadim Nikiforov Mobile and Web Developer'
+  rel-author: 'https://plus.google.com/u/0/115052128632990360935/'
+  rel-publisher: 'https://plus.google.com/u/0/115052128632990360935/'
+
+
+#-------------------------------
+# Google Analytics Section
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+google-analytics-ua: 'UA-112832782-1'
+
+#-------------------------------
+# Contact Section - Social links
+
+email: nikifovadim@gmail.com
+
+social-links:
+- {name: LinkedIn, url: 'https://www.linkedin.com/in/vadim-nikiforov-742260155', icon-type: linkedin-in }
+- {name: '@nikifovadim', url: 'https://twitter.com/nikifovadim', icon-type: twitter }
+- {name: StackOverflow, url: 'https://stackoverflow.com/users/8372083/vadim-nikiforov', icon-type: stack-overflow }
+- {name: Codepen, url: 'https://codepen.io/nikifovadim', icon-type: codepen }
+- {name: GitHub, url: 'https://github.com/vnikifirov', icon-type: github }
+
+
+#-------------------------------
+# Skiils Section
+
+skills:
+- {name: Google, icon-type: "google-plain colored"}
+- {name: CSharp, icon-type: "csharp-plain"}
+- {name: .NET, icon-type: "dot-net-plain-wordmark"}
+- {name: MySQL, icon-type: "mysql-plain"}
+- {name: JavaScript, icon-type: "javascript-plain"}
+- {name: Angular2+, icon-type: "angularjs-plain colored"}
+- {name: Jasmine, icon-type: "jasmine-plain colored"}
+- {name: JQuery, icon-type: "jquery-plain-wordmark"}
+- {name: HTML, icon-type: "html5-plain-wordmark"}
+- {name: CSS, icon-type: "css3-plain-wordmark"}
+- {name: SASS, icon-type: "sass-original"}
+- {name: Less, icon-type: "less-plain-wordmark colored"}
+- {name: Ubuntu, icon-type: "ubuntu-plain colored"}
+- {name: TypeScript, icon-type: "typescript-plain colored"}
+- {name: CPP, icon-type: "cplusplus-plain colored"}
+- {name: Oracle, icon-type: "oracle-original colored"}
+- {name: VisualStudio, icon-type: "visualstudio-plain colored"}
+- {name: Trello, icon-type: "trello-plain colored"}
+- {name: Slack, icon-type: "slack-plain colored"}
+- {name: Photoshop, icon-type: "photoshop-plain colored"}
+
+#-------------------------------
+# Projects Section
+
+projects:
+- {name: nikifovadim.com, description: "My personal site profolio", folder: 'proj-1', link: 'http://nikifovadim.com', github-url: 'http://nikifovadim.com/projects/proj-1', image: 'thumb.png'}
+- {name: Placeholder, description: "So, what is a next ...", folder: 'proj-2', link: 'undefined@undefined.com', github-url: 'http://nikifovadim.com/assets/img/projects/proj-2', image: 'thumb.png'}
+
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+
+sass:
+  style:    :compressed
+  sass_dir: assets/css
+
+defaults:
+  - scope:
+      path: _assets/img
+    values:
+      image: true
+
+# defaults:
+#   - scope:
+#       path: "assets/img"
+#     values:
+#       image: true
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+
+exclude: [
+  public,
+  Gemfile,
+  Gemfile.lock,
+  Rakefile,
+  README.md,
+  prepros-6.config,
+  vendor,
+  # Default stuff
+  Gemfile,
+  Gemfile.lock,
+  node_modules,
+  vendor/bundle/,
+  vendor/cache/,
+  vendor/gems/,
+  vendor/ruby/
+]

@@ -1,0 +1,172 @@
+section
+  // h3.s-header
+  //   margin-bottom: 45px
+
+  .wrapper
+    width: 90%
+    max-width: 1140px
+    margin: 0 auto
+    padding-top: 40px
+    +clearfix
+
+  .contact-social
+    font-family: "Roboto", sans-serif
+    float: left
+    width: 45%
+
+    .social__email
+      font-size: 1.5rem
+      font-weight: 600
+      color: #2d2d2d
+      position: relative
+      padding-bottom: 5px
+
+      &:after
+        position: absolute
+        left: 50%
+        right: 50%
+        height: 3px
+        bottom: 0
+        content: ""
+        background-color: $color-accent
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+      &:hover
+        +current($color-accent)
+
+        &:after
+          left: 10%
+          right: 10%
+
+
+    .social__links
+      list-style-type: none
+      color: #2d2d2d
+      font-size: 1.3rem
+
+      a
+        position: relative
+        color: #111
+        padding-bottom: 5px
+
+      & a:after
+        position: absolute
+        left: 50%
+        right: 50%
+        height: 3px
+        bottom: 0
+        content: ""
+        background-color: $color-accent
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+      & a:hover
+        +current($color-accent)
+        &:after
+          left: 10%
+          right: 10%
+
+  .contact-form
+    float: right
+    width: 45%
+
+  // TODO : It's bad practice !!!
+  .contact-form > *
+    border: none
+
+  .contact-form
+    max-width: 450px
+    margin: 0 auto
+    // padding: 0 30px
+
+    input, textarea
+      border: 1px solid #5e5e5e
+      width: 100%
+      box-sizing: border-box
+      padding: 10px
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      font-size: 16px
+
+      &:focus
+        outline: none
+        border-color: $color-accent
+
+    // TODO : I think it could be better !!!
+    textarea, input:not(.btn-submit)
+      border-left: 2px solid $color-accent
+
+    textarea
+      height: 10em
+      resize: none
+
+    [type="submit"]
+      border: 1px solid $color-accent
+      background: $accent-light
+      color: $color-accent
+      font-size: 18px
+      text-transform: uppercase
+      width: 33%
+      float: right
+
+      &:hover
+        background: $color-accent
+        color: $accent-light
+
+    .contact-info-group
+      label
+        width: 50%
+        float: left
+        box-sizing: border-box
+
+        &:nth-child(1)
+          padding-right: 10px
+
+        &:nth-child(2)
+          padding-left: 10px
+
+    label
+      display: block
+      margin-bottom: 20px
+
+      span
+        display: block
+
+@media (max-width: 780px)
+  .wrapper
+    padding: 0
+
+    .contact-form
+      float: none
+      // margin: 0
+      padding-bottom: 60px
+      display: block
+      width: 100%
+
+      .contact-info-group
+        label
+          width: 100%
+
+          &:nth-child(1)
+            padding: 0
+
+          &:nth-child(2)
+            padding: 0
+
+      [type="submit"]
+        float: none
+        width: 100%
+
+    .contact-social
+      font-family: "Roboto", sans-serif
+      float: none
+      display: block
+      margin: 0 auto
+      // padding: 0 60px
+      width: 80%
+
+      .social__email
+        font-size: 1.3rem
+
+
+

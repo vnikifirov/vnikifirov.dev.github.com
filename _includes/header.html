@@ -1,0 +1,24 @@
+<header id="home">
+  <!-- <header> -->
+    <div class="menu">
+
+      <div class="brand">
+        <a href="#home">
+          <div class="brand-img"></div>
+        </a>
+      </div>
+
+      <nav>
+        {% for item in site..menu %}
+          <a href="{{ item.url }}">{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+
+    <div class="byline">
+      <p>{{site.byline}}</p>
+      <p>{{site.occupation}}</p>
+    </div>
+  <!-- </div> -->
+
+</header>

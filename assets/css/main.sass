@@ -1,0 +1,40 @@
+---
+---
+// Globals ——————————————————————————————————— •
+// ——————————————————————————————————————————— •
+@charset 'UTF-8'
+
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+//------------------------------------------------
+// Transition the image paths from the settings file to usable SASS variables
+$logo-path: '{{ site.logo }}'
+$bg-image-path: '{{ site.bg-image }}'
+$logo-path: '{{ site.logo }}'
+$avatar-path: '{{ site.avatar }}'
+
+// 1 - TOOLS
+@import '_sass/1-tools/bourbon/bourbon'
+@import '_sass/1-tools/_fonts'
+@import '_sass/1-tools/_normalize'
+@import '_sass/1-tools/_vars'
+
+
+// 2 - BASICS
+@import '_sass/2-basics/_mixins.sass'
+@import '_sass/2-basics/_placeholders'
+@import '_sass/2-basics/body-element'
+@import '_sass/2-basics/selection-colors'
+@import '_sass/2-basics/links'
+@import '_sass/2-basics/typography'
+
+// 3 - Modules
+@import '_sass/3-modules/_header'
+@import '_sass/3-modules/_about'
+@import '_sass/3-modules/_skills.sass'
+@import '_sass/3-modules/_projects'
+@import '_sass/3-modules/_contact'
+@import '_sass/3-modules/_footer'
+

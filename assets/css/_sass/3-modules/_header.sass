@@ -1,0 +1,109 @@
+header
+  min-height: 85vh
+  width: 100%
+  +bg-img($bg-image-path)
+  background-color: rgba(0,0,0,0.5)
+  background-blend-mode: overlay
+  position: relative
+
+  .menu
+    +gradient($gradient-menu...)
+    width: 100%
+    height: 60px
+    border-bottom: 1px solid #888
+    position: fixed
+    z-index: 100
+
+    .brand a
+      float: left
+      margin:
+        top: 20px
+        left: 30px
+
+      .brand-img
+        +size(50px)
+        +bg-img($logo-path)
+
+      // TODO: Create template
+      font:
+          size: 1.0rem
+          family: "Open Sans", sans-serif
+          weight: 700
+
+      &:hover
+        +current($color-accent)
+
+      & > span
+        font:
+          size: 26px
+
+    nav
+      margin: 0 auto
+      width: 500px
+      padding: 20px 0
+      z-index: 100
+
+      a
+        display: inline
+        margin-left: 40px
+        letter-spacing: 0.3em
+        // TODO: Create mixin or template
+        position: relative
+        padding-bottom: 5px
+
+        text-align: center
+        color: rgba(250,250,250,0.7)
+        text-transform: uppercase
+        font:
+          size: 0.875rem
+          weight: 700
+
+      // TODO: Create mixin or template
+      & a:after
+        position: absolute
+        left: 50%
+        right: 50%
+        height: 3px
+        bottom: 0
+        content: ""
+        background-color: $color-accent
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+      // TODO: Create mixin or template
+      & a:hover
+        +current($color-accent)
+        &:after
+          left: 10%
+          right: 10%
+
+
+
+  .byline
+    text-align: center
+    text-shadow: 1px 1px 3px #000
+    color: white
+    letter-spacing: 0.3em
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font:
+      size: 1.3rem
+      weight: 700
+      family: "Raleway", sans-serif
+
+    span.higlidght
+      +current($color-accent)
+
+// TODO: Media query in separated file
+@media (max-width: 780px)
+  header
+    .menu
+      display: none
+
+    .byline
+      font-size: 1rem
+      margin-bottom: 30px
+
+      .brand-img
+        display: block

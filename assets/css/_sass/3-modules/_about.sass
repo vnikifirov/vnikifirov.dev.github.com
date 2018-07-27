@@ -1,0 +1,49 @@
+section
+  background: white
+  width: 100%
+
+  .wrapper-about
+    +clearfix
+
+  .photo-wrapper
+    height: 450px
+    float: left
+    width: 40%
+
+    .photo
+      height: 420px
+      // background-color: #9e9e9e
+      margin: 0 auto
+      // TODO: Create mixin
+      background:
+        image: url(../img/#{$avatar-path})
+        position: center center
+        repeat: no-repeat
+        // size: 300px
+        // size: cover
+
+  .text-wrapper
+    float: right
+    width: 50%
+
+    p
+      line-height: 1.6
+      font-size: 1.3rem
+
+// TODO: Media query in separated file
+@media (max-width: 780px)
+  .wrapper-about
+    width: 100%
+
+    .photo-wrapper
+      height: 450px
+      float: none
+      width: 100%
+
+      .photo
+        height: 420px
+        width: 100%
+
+    .text-wrapper
+      float: none
+      width: 100%

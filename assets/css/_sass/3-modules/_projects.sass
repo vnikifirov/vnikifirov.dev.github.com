@@ -1,0 +1,89 @@
+section
+  background: white
+
+  .wrapper-projects
+    max-width: 960px
+    margin: 0 auto
+
+    .box
+      width: 30%
+      margin-bottom: 100px
+      display: inline-block
+      padding: 0 10px
+
+      figure
+        // TODO: Create mixin card
+        margin: 0px auto
+        overflow: hidden
+        max-width: 400px
+        margin: 0px auto
+        padding-bottom: 40px
+        background-color: white
+        box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.05)
+
+        .project-wrapper
+          img
+            width: 100%
+            height: 100%
+            // TODO: Create mixin
+            background:
+              size: cover
+              position: center center
+              repeat: no-repeat
+
+
+
+          height: 300px
+          overflow: hidden
+          width: 100%
+          max-width: 400px
+          text-align: center
+
+        figcaption
+          // TODO: Create template
+          margin-top: 32px
+          // font-family: "Roboto Slab", sans-serif
+          font-size: 1.3rem
+          text-align: center
+          color: #627175
+
+        p
+          // TODO: Create template
+          max-width: 240px
+          margin: 0px auto
+          font-size: 1rem
+          line-height: 2rem
+          text-align: center
+          color: #8b979a
+
+          // TODO: Create template or mixin
+          a
+            display: block
+            position: relative
+            color: #111
+            padding-bottom: 5px
+
+          & a:after
+            position: absolute
+            left: 50%
+            right: 50%
+            height: 3px
+            bottom: 0
+            content: ""
+            background-color: $color-accent
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+          & a:hover
+            +current($color-accent)
+            &:after
+              left: 10%
+              right: 10%
+
+// TODO: Move in mixin sass file
+@media (max-width: 780px)
+  section
+    .wrapper-projects
+      .box
+        width: 100%
+        display: block
+        padding: 0

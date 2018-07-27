@@ -1,0 +1,25 @@
+<section>
+
+  <h3 id="projects" class="s-header">My work</h3>
+
+  <div class="wrapper wrapper-projects">
+
+  {% for project in site.projects %}
+    <div class="box">
+      <figure>
+        <div class="project-wrapper project-img" data-url="{{ site.github-url }}/projects/{{ project.folder }}">
+          <img src="{{site.github-url}}/assets/img/projects/{{project.folder}}/thumb.png" alt="{{ project.name }}" />
+        </div>
+        <figcaption>{{project.name}}</figcaption>
+        <p>
+          {{project.description}}
+          {% if project.link != null %}
+            <a href="{{project.link}}" target="blank">{{project.link}}</a>
+          {% endif %}
+        </p>
+      </figure>
+    </div>
+  {% endfor %}
+  </div>
+
+</section>

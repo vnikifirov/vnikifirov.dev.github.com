@@ -1,0 +1,16 @@
+<section>
+
+  <h3 id="skills" class="s-header">Skiils</h3>
+
+  <div class="wrapper wrapper-skills">
+
+    {% for skill in site.skills %}
+      <div class="skill-item">
+        <i class="devicon-{{ skill.icon-type }} colored icon"></i>
+        <p class="definition">{{skill.name}}</p>
+      </div>
+    {% endfor %}
+
+  </div>
+
+</section>

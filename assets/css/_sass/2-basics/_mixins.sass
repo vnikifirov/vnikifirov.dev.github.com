@@ -1,0 +1,52 @@
+@mixin current($color)
+  color: $color
+  -webkit-transition: color .5s
+  transition: color .5s
+
+@mixin higlidght($color)
+  +current($color-accent)
+  position: relative
+  // padding-bottom: 5px
+
+  &:after
+    position: absolute
+    left: 50%
+    right: 50%
+    height: 3px
+    bottom: 0
+    content: ""
+    background-color: $color-accent
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+    &:hover
+      +current($color-accent)
+      &:after
+        left: 10%
+        right: 10%
+
+// TODO: Issue with apth to assets, look at Static Files on jekyllrb.com
+@mixin background($img, $color: transparent, $position: cover,$repeat: no-repeat, $size: 100%)
+  background: $color url(.\assets\img\#{$img}.png) $position $repeat
+
+@mixin display-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+@mixin flex($value)
+  -webkit-flex: $value
+  -ms-flex: $value
+  flex: $value
+
+
+@mixin gradient($direction, $start, $end)
+  background:
+    color: $start
+    image: linear-gradient($direction, $start, $end)
+
+@mixin bg-img($img-path, $repeat: no-repeat, $position: center, $size: cover)
+  background:
+    image: url(../img/#{$img-path})
+    repeat: $repeat
+    position: $position
+    size: $size
